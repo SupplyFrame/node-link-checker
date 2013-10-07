@@ -5,7 +5,7 @@ var check = require('./index.js');
 
 var program = require('commander');
 
-var packageJSON = require('../package.json');
+var packageJSON = require('./package.json');
 
 program.version(packageJSON.version)
 	.option('-t, --type [type]', 'Document type must be one of `pdf`, `zip`, `jpeg`, `gif` or `png`. [pdf]', 'pdf')
