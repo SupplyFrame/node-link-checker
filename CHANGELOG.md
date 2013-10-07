@@ -1,6 +1,9 @@
 # Node Link Checker Changelog
 
-##[v0.0.4](https://github.com/SupplyFrame/node-link-checker/commit/ab36e90b8a241e4aaa9d0d793d1f6319ab1b363a)
+##[v0.0.5](https://github.com/SupplyFrame/node-link-checker/commit/e85d7305cffe230283532ebd3223539363f925d9)
+- Added readme. - [view commit](https://github.com/SupplyFrame/node-link-checker/commit/0bcf1ed1f1e272e7ba8a0be5ad8d7b04fc3c7e03)
+
+##[v0.0.4](https://github.com/SupplyFrame/node-link-checker/commit/d35e51cdc7c3b2a7e4819967469ea06fababe1c3)
 - Fixed cli version. - [view commit](https://github.com/SupplyFrame/node-link-checker/commit/bcf25489f518606bb6a4a30747b79af170555804)
 
 ##[v0.0.3](https://github.com/SupplyFrame/node-link-checker/commit/f474f1b6097ea65849641a8545758ac9ebd04b64)
