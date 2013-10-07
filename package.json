@@ -1,0 +1,36 @@
+{
+  "name": "node-link-checker",
+  "version": "0.0.0",
+  "description": "A commandline utility and nodejs library for checking the state of a link to a file.",
+  "bugs": {
+    "url": "http://github.com/SupplyFrame/node-link-checker/issues"
+  },
+  "repositor": {
+    "type": "git",
+    "url": "http://github.com/SupplyFrame/node-link-checker"
+  },
+  "changelog": {
+    "title": "Node Link Checker",
+    "commit-url": "https://github.com/SupplyFrame/node-link-checker/commit/${commitId}",
+    "issue-url": "http://github.com/SupplyFrame/node-link-checker/issues/${issueId}"
+  },
+  "author": {
+    "name": "Ben Delarre",
+    "email": "bdelarre@supplyframe.com",
+    "url": "http://delarre.net/"
+  },
+  "contributors": [
+    {
+      "name": "Ben Delarre",
+      "email": "bdelarre@supplyframe.com",
+      "url": "http://delarre.net/"
+    }
+  ],
+  "devDependencies": {
+    "node-hooked-changelog": "*"
+  },
+  "dependencies": {
+    "request": "~2.27.0",
+    "commander": "~2.0.0"
+  }
+}
