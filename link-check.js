@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path');
-var check = require('index.js');
+var check = require('./index.js');
 
 var program = require('commander');
 
