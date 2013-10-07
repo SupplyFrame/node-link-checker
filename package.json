@@ -26,6 +26,10 @@
       "url": "http://delarre.net/"
     }
   ],
+  "bin": {
+    "link-check": "link-check.js"
+  },
+  "preferGlobal": true,
   "devDependencies": {
     "node-hooked-changelog": "*"
   },
