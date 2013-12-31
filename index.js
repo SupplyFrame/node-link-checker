@@ -126,6 +126,9 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 			if (err) {
 				callback(err, result);
 			} else {
+				if (result.matched) {
+					return callback(null, result);
+				}
 				// append any redirects we've encountered thus far
 				for (var i=0; i < r.redirects.length; i++) {
 					var redirect = {
@@ -179,6 +182,9 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
   		r.pipe(fs.createWriteStream(info.path));
 
   		r.on('data', function(chunk) {
+ 			if (result.matched) {
+ 				return;
+ 			}
 			var readyBytes = Math.min(chunk.length, requiredBytes-readBytes);
 			chunk.copy(buffer, readBytes, 0, readyBytes);
 			readBytes += readyBytes;
@@ -204,8 +210,7 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 						}
 					}
 					if (matching) {
-						r.abort();
-
+						//r.abort();
 						var finalUrl = requestUrl;
 						if (r.redirects && r.redirects.length > 0) {
 							finalUrl = r.redirects[r.redirects.length-1].redirectUri;	
@@ -220,7 +225,6 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 						result.matched = true;
 						result.matchedType = type.name;
 						result.actual = finalUrl;
-						return callback(null, result);
 					}
 				}
 			}
