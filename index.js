@@ -121,6 +121,7 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 		// load the url
 		var r = request({
 			'method':'GET',
+			'timeout': 30000,
 			'uri': requestUrl
 		}, function(err, response, body) {
 			if (err) {
