@@ -152,11 +152,9 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 				result.tempPath = info.path+suffix;
 
 				// attempt to find meta refresh redirect in body text
-				var re = /meta.+?http-equiv\W+?refresh/i;
-				var regexMatch = body.match(re);
-				if (regexMatch) {
-					re = /content.+?url\W+?(.+?)\"/i;
-					var matches = body.match(re);
+				var re = /meta.+?http-equiv\W+?refresh\W+?\s+content=\W+[0-9]*;?url=(.*)["']/i;
+				var matches = body.match(re);
+				if (matches) {
 					if (matches.length >= 2) {
 						var newUrl = matches[1];
 						// resolve the url
