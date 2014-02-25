@@ -1,6 +1,6 @@
 {
   "name": "node-link-checker",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A commandline utility and nodejs library for checking the state of a link to a file.",
   "bugs": {
     "url": "http://github.com/SupplyFrame/node-link-checker/issues"
