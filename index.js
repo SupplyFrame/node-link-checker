@@ -117,7 +117,16 @@ function checkUrl(requestUrl, fileType, callback, recurseCount, result) {
 
 	temp.track();
 	temp.open({prefix:'node-link-checker-'}, function(err, info) {
-  		fs.closeSync(info.fd);
+		if (err) {
+			console.log('Failed to open temp file : ' + err);
+			return callback(err);
+		}
+		try {
+  			fs.closeSync(info.fd);
+  		} catch (e) {
+  			console.log('Failed to close temp file : ' + e);
+			return callback(e);	
+  		}
 		// load the url
 		var r = request({
 			'method':'GET',
